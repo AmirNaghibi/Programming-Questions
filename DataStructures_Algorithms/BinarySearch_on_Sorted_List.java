@@ -20,7 +20,7 @@ public class BinarySearch_on_Sorted_List{
 		int[] arr2 = new int[12];
 
 		int key = 21;
-		int result = obj.bSearch(arr2, key, 0, 11);
+		int result = obj.bSearch(arr, key, 0, 11);
 		System.out.println(result);
 	}
 }
