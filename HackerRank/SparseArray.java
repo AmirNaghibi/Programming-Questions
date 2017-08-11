@@ -1,3 +1,8 @@
+/*
+	Link to the Hacker Rank Question: 
+		https://www.hackerrank.com/challenges/sparse-arrays
+*/
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
