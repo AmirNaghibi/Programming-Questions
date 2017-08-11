@@ -1,6 +1,7 @@
 /*
 	Link to the Hacker Rank Question: 
 		https://www.hackerrank.com/challenges/sparse-arrays
+		Count the number of queries in a list
 */
 
 import java.util.Scanner;
