@@ -21,7 +21,7 @@ public class Fibonacci{
 		memo[0] = 1;
 		memo[1] = 1;
 
-		Get ArrayIndexOutOfBoundsException for n=0 or n=1
+		Get ArrayIndexOutOfBoundsException for n=0 or n=1g
 		*/
 		if (memo[i]==0) {
 			memo[i] = fibonacciDynamic(i-1,memo) + fibonacciDynamic(i-2, memo);
@@ -30,12 +30,28 @@ public class Fibonacci{
 		return memo[i];
 	}
 
+	// This is memory efficient, since we are not creating a brand new array and 
+	//		computing results again. We just store the last two numbers
+	int fibonacciEfficient(int n){
+		if(n==0 || n==1) return 1;
+
+		int a = 1;
+		int b = 1;
+		for (int i=2; i<n; i++) {
+			int c = a + b;
+			a = b;
+			b=c;
+		}
+		return a + b;
+	}
+
 
 	public static void main(String[] args) {
 		Fibonacci obj = new Fibonacci();
 
 		//int result1 = obj.fibonacciRecursive(5);
-		int result2 = obj.fibonacciDynamic(0);
-		System.out.println(result2);
+		//int result2 = obj.fibonacciDynamic(0);
+		int result3 = obj.fibonacciEfficient(40);
+		System.out.println(result3);
 	}
 }
