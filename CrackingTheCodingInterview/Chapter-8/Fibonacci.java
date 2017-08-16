@@ -9,10 +9,12 @@ public class Fibonacci{
 	}
 
 
+	// Calls the helper method
 	int fibonacciDynamic(int n){
 		return fibonacciDynamic(n, new int[n+1]);
 	}
 
+	// Memo referes to memoization. Caching the data.
 	int fibonacciDynamic(int i, int[] memo){
 		if(i==0 || i==1) return 1;
 		
@@ -29,6 +31,8 @@ public class Fibonacci{
 
 		return memo[i];
 	}
+
+
 
 	// This is memory efficient, since we are not creating a brand new array and 
 	//		computing results again. We just store the last two numbers
