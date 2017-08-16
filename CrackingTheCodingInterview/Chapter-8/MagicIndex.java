@@ -23,4 +23,7 @@ public class MagicIndex{
 		int result = findMagicIndexSorted(arr);
 		System.out.println(result); 
 	}
+
+
+	// TODO : Implement the function using binary search 
 }
