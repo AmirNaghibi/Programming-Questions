@@ -18,6 +18,12 @@ public class MagicIndex{
 			return -2;
 	}
 
+
+	// TODO
+	int findMagicIndexRecursive(int[] array){
+		return 0;
+	}
+
 	public static void main(String[] args) {
 		int[] arr = new int[]{-5,-4,-2,4,5,6,7,8};
 		int result = findMagicIndexSorted(arr);
