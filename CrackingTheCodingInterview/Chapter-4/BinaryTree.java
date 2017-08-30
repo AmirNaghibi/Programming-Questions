@@ -4,6 +4,9 @@
 	- numNodes()
 	- isEmpty()
 	- isBST()
+	- in_order()
+	- pre_order()
+	- post_order()
 */
 
 
@@ -23,7 +26,7 @@ public class BinaryTree{
 
 
 	//==========================================================
-	// 						   METHODS
+	// 						  GENERAL METHODS
 	//==========================================================
 	boolean isEmpty(){
 		if(this.totalNumberOfNodes==0) return true;
@@ -51,6 +54,36 @@ public class BinaryTree{
 			currentParent.left = insert(node, currentParent.left);
 		}
 		return currentParent;
+	}
+
+
+	//==========================================================
+	// 				   TREE TRAVERSAL METHODS
+	//==========================================================
+	void pre_order(Node root){
+		if(root != null){
+			System.out.println(root.data);
+			pre_order(root.left);
+			pre_order(root.right);
+		}
+	}
+
+
+	void in_order(Node root){
+		if(root != null){
+			in_order(root.left);
+			System.out.println(root.data);
+			in_order(root.right);
+		}
+	}
+
+
+	void post_order(Node root){
+		if(root != null){
+			post_order(root.left);
+			post_order(root.right);
+			System.out.println(root.data);
+		}
 	}
 
 
