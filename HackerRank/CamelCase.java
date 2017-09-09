@@ -24,8 +24,9 @@ public class CamelCase{
 
 
 	public static void main(String[] args) {
-		int result = countWords("theUniversityOfBritishColumbia");
+		int result = countWords("theUniversityOfBritishColumbiaIsBeautiful");
 
-		System.out.println(result);
+		// %03d upto 3 digits
+		System.out.printf("%03d%n",result);
 	}
 }
